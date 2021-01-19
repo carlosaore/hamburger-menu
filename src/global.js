@@ -52,4 +52,10 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
+    @media (max-width: 600px) {
+        .big-navbar {
+            display: none
+        }
+    }
+
     `

@@ -5,6 +5,7 @@ import { GlobalStyles } from './global';
 import { theme } from './theme';
 import { useOnClickOutside } from './hooks';
 import { Burger, Menu } from './components';
+import BigNavbar from "./components/BigNavbar"
 import Team from "./components/Team";
 import About from "./components/About";
 import Home from "./components/Home";
@@ -20,6 +21,9 @@ function App() {
         <div ref={node} className="burger-menu">
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
+        </div>
+        <div className="big-navbar">
+          <BigNavbar />
         </div>
         <Switch>
           <Route
