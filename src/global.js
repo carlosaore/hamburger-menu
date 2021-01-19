@@ -45,4 +45,11 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.primaryHover};
     text-decoration: none;
     }
+
+    @media (min-width : 600px) {
+        .burger-menu {
+            display: none
+        }
+    }
+
     `

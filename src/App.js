@@ -17,7 +17,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <div ref={node}>
+        <div ref={node} className="burger-menu">
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </div>
