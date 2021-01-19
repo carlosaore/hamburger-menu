@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useRef } from 'react';
+import { Switch, Route } from "react-router-dom";
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles } from './global';
+import { theme } from './theme';
+import { useOnClickOutside } from './hooks';
+import { Burger, Menu } from './components';
+import Team from "./components/Team";
+import About from "./components/About";
+import Home from "./components/Home";
 
 function App() {
+  const [open, setOpen] = useState(false);
+  const node = useRef(); 
+  useOnClickOutside(node, () => setOpen(false))
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <div ref={node}>
+          <Burger open={open} setOpen={setOpen} />
+          <Menu open={open} setOpen={setOpen} />
+        </div>
+        <Switch>
+          <Route
+            exact path="/"
+            render={props =>
+              <Home {...props} />
+            }
+          />  
+          <Route
+            path="/about"
+            render={props =>
+              <About {...props} />
+            }  
+          />
+          <Route
+            path="/team"
+            render={props =>
+              <Team {...props} />
+            }
+          />
+        </Switch>
+      </>
+    </ThemeProvider>
   );
 }
-
 export default App;
