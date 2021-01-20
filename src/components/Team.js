@@ -1,5 +1,7 @@
 const Team = (props) => (
-    <p>Team component</p>
+    <div>
+        <p>Team component</p>
+    </div>
 );
 
 export default Team;
