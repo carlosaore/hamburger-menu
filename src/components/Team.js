@@ -1,6 +1,6 @@
 const Team = (props) => (
     <div>
-        <p>Team component</p>
+        <p>Team componentd.</p>
     </div>
 );
 
