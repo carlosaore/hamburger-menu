@@ -3,6 +3,6 @@
 
 This is not a finished product but a coding exercise to make a reusable component that can be inserted in different projects after more styling.
 
-When screen is wide, a plain navbar is diplayed, and when screen is small (smartphone small) the navbar is replaced by a burger menu.
+When screen is wide, a plain navbar is displayed, and when the screen is small (smartphone small), the navbar is replaced by a burger menu.
 
 [View demo](https://distracted-hopper-888c9d.netlify.app/)
